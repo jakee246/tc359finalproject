@@ -8,7 +8,25 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-2">
+          <ul>
+            
+  <nav class="navbar navbar-default" role="navigation">
+  <ul class="nav nav-tabs" role="tablist">
+  <li><%= link_to 'View list', articles_path %></li>
+  <li><%= link_to 'New Article', new_article_path %></li>
+</ul>
+</nav>
+
+          </ul>
+        </div>
+        <div class="col-xs-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>
