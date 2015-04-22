@@ -17,6 +17,7 @@
 $text-color:red;
 $navbar-default-color: #FFFFFF;
 $navbar-default-bg: #ababab;
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 
