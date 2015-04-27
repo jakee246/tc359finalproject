@@ -6,35 +6,22 @@
     title: :horizontal_file_input,
     boolean: :horizontal_boolean
  } do |f| %>
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.error_notications %>
  
-<div class="form-group">
-    <%= f.label :title%>
-    <%= f.text_field :title, class: 'form-control'  %>
-</div>
- 
-<div class="form-group">
-    <%= f.label :text %>
-    <%= f.text_area :text, class: 'form-control' %>
+  <div class="form-group">
+      <%= f.input :title  %>
   </div>
-</div>
- 
- <div class="actions form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-    <%= f.submit %>
-</div>
-</div>
+   
+  <div class="form-group">
+      <%= f.input :text %>
+      <%= f.input :text, class: 'form-control' %>
+    </div>
+  </div>
+   
+   <div class="actions form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit %>
+  </div>
+  </div>
  
 <% end %>
