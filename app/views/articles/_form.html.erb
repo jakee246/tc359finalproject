@@ -6,22 +6,15 @@
     title: :horizontal_file_input,
     boolean: :horizontal_boolean
  } do |f| %>
-  <%= f.error_notications %>
+  <%= f.error_notification %>
  
-  <div class="form-group">
-      <%= f.input :title  %>
-  </div>
+
+  <%= f.input :title  %>
+  <%= f.input :text %>
    
-  <div class="form-group">
-      <%= f.input :text %>
-      <%= f.input :text, class: 'form-control' %>
-    </div>
-  </div>
-   
-   <div class="actions form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+
+  <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit %>
-  </div>
   </div>
  
 <% end %>
