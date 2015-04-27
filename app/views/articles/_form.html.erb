@@ -1,5 +1,11 @@
-<%= form_for(@article, html: {class: 'form'}) do |f| %>
- 
+<%= simple_form_for @article, 
+ wrapper: :inline_form,
+ html: {class: 'form-horizontal'},
+   wrapper: :horizontal_form,
+  wrapper_mappings: {
+    title: :horizontal_file_input,
+    boolean: :horizontal_boolean
+ } do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -14,7 +20,7 @@
     </div>
   <% end %>
  
-<div class=" field form-group">
+<div class="form-group">
     <%= f.label :title%>
     <%= f.text_field :title, class: 'form-control'  %>
 </div>
